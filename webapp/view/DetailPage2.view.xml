@@ -1,0 +1,185 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.redShop.controller.DetailPage2" xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Page title="Product Detail View" showHeader="true" showFooter="true" showNavButton="false">
+        <content>
+            <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="950px" height="auto" justifyContent="End" renderType="Div" visible="true" displayInline="false">
+                <items>
+                    <Button text="" type="Default" icon="sap-icon://cart-full" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                </items>
+                <layoutData/>
+            </HBox>
+            <ObjectHeader intro="ID" title="Product Name" icon="sap-icon://product" number="0,00" numberUnit="EUR" numberState="None" titleActive="false" backgroundDesign="Translucent" condensed="false" visible="true">
+                <attributes/>
+                <statuses/>
+                <markers/>
+            </ObjectHeader>
+            <HBox alignItems="Stretch" direction="Row" fitContainer="false" width="1000px" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                <items>
+                    <RatingIndicator value="0" maxValue="5" visualMode="Half" enabled="true" visible="true" editable="true" class="sapUiMediumMargin"/>
+                    <VBox alignItems="Stretch" direction="Row" fitContainer="false" width="600px" height="auto" justifyContent="End" renderType="Div" visible="true" displayInline="false">
+                        <items>
+                            <Text text="Amount:" width="100px" maxLines="1" wrapping="false" textAlign="Right" textDirection="Inherit" visible="true" class="sapUiSmallMarginTop sapUiTinyMarginBottom sapUiTinyMarginBegin sapUiTinyMarginEnd"/>
+                            <ComboBox selectedKey="" editable="true" enabled="true" visible="true" width="60px" valueState="None" maxWidth="60px" class="sapUiTinyMargin">
+                                <items>
+                                    <core:Item text="1" enabled="true" key="1"/>
+                                    <core:Item text="2" enabled="true" key="2"/>
+                                    <core:Item text="3" enabled="true" key="3"/>
+                                </items>
+                            </ComboBox>
+                        </items>
+                        <layoutData/>
+                    </VBox>
+                    <VBox alignItems="End" direction="Column" fitContainer="false" width="250px" height="120px" justifyContent="End" renderType="Div" visible="true" displayInline="false">
+                        <items>
+                            <Button text="Add to basket" type="Default" iconFirst="true" width="150px" enabled="true" visible="true" iconDensityAware="false" class="sapUiTinyMarginTop sapUiTinyMarginBottom sapUiTinyMarginBegin sapUiLargeMarginEnd" press="_onButtonPress1"/>
+                            <Button text="Buy now" type="Default" iconFirst="true" width="150px" enabled="true" visible="true" iconDensityAware="false" class="sapUiTinyMarginTop sapUiTinyMarginBottom sapUiTinyMarginBegin sapUiLargeMarginEnd"/>
+                        </items>
+                        <layoutData/>
+                    </VBox>
+                </items>
+                <layoutData/>
+            </HBox>
+            <IconTabBar expandable="false" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="Ok">
+                <items>
+                    <IconTabFilter icon="sap-icon://hint" iconColor="Positive" text="Details" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <List mode="SingleSelectMaster" width="100%" headerText="Product details" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
+                                <infoToolbar>
+                                    <Toolbar width="100%" height="auto" design="Auto" visible="false" enabled="true">
+                                        <content>
+                                            <Label text="Label" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </content>
+                                    </Toolbar>
+                                </infoToolbar>
+                                <headerToolbar/>
+                                <items>
+                                    <StandardListItem icon="sap-icon://org-chart" title="Category" description="Description 1" info="" infoState="None" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem icon="sap-icon://supplier" title="Supplier" description="Description 2" info="" infoState="Success" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem icon="sap-icon://date-time" title="Release Date" description="Description 3" info="" infoState="Error" type="Active" selected="false" visible="true"/>
+                                    <StandardListItem icon="sap-icon://lateness" title="Discontinued Date" description="Description 3" info="" infoState="Error" type="Active" selected="false" visible="true"/>
+                                </items>
+                            </List>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabSeparator icon="" iconDensityAware="false"/>
+                    <IconTabFilter icon="sap-icon://retail-store" iconColor="Default" text="Similar Items" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" class="sapUiResponsiveMargin">
+                                <infoToolbar/>
+                                <headerToolbar/>
+                                <columns>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Produkt Name" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Category" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Supplier" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Price" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Rating" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem type="Active">
+                                        <cells>
+                                            <ObjectIdentifier title="Product Name" text="Product ID" titleActive="false" visible="true"/>
+                                            <Text text="Category Name" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="Supplier Name" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <ObjectNumber number="0,00" unit="EUR" emphasized="true" state="None"/>
+                                            <RatingIndicator value="0" maxValue="5" visualMode="Half" enabled="true" visible="true" editable="true"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem type="Active">
+                                        <cells>
+                                            <ObjectIdentifier title="Product Name" text="Product ID" titleActive="false" visible="true"/>
+                                            <Text text="Category Name" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="Supplier Name" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <ObjectNumber number="0,00" unit="EUR" emphasized="true" state="None"/>
+                                            <RatingIndicator value="0" maxValue="5" visualMode="Half" enabled="true" visible="true" editable="true"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem type="Active">
+                                        <cells>
+                                            <ObjectIdentifier title="Product Name" text="Product ID" titleActive="false" visible="true"/>
+                                            <Text text="Category Name" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <Text text="Supplier Name" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <ObjectNumber number="0,00" unit="EUR" emphasized="true" state="None"/>
+                                            <RatingIndicator value="0" maxValue="5" visualMode="Half" enabled="true" visible="true" editable="true"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabSeparator icon="" iconDensityAware="false"/>
+                    <IconTabFilter icon="sap-icon://favorite" iconColor="Critical" text="Reviews" count="" design="Vertical" showAll="false" textDirection="Inherit" enabled="true" visible="true" iconDensityAware="false">
+                        <content>
+                            <Table width="auto" noDataText="No data" mode="None" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" class="sapUiResponsiveMargin">
+                                <infoToolbar/>
+                                <headerToolbar/>
+                                <columns>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="User" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                    <Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                        <header>
+                                            <Text text="Rating" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                        </header>
+                                        <footer/>
+                                    </Column>
+                                </columns>
+                                <items>
+                                    <ColumnListItem type="Active">
+                                        <cells>
+                                            <Text text="Username" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <RatingIndicator value="0" maxValue="5" visualMode="Half" enabled="true" visible="true" editable="true"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem type="Active">
+                                        <cells>
+                                            <Text text="Username" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <RatingIndicator value="0" maxValue="5" visualMode="Half" enabled="true" visible="true" editable="true"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                    <ColumnListItem type="Active">
+                                        <cells>
+                                            <Text text="Username" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                            <RatingIndicator value="0" maxValue="5" visualMode="Half" enabled="true" visible="true" editable="true"/>
+                                        </cells>
+                                    </ColumnListItem>
+                                </items>
+                            </Table>
+                        </content>
+                    </IconTabFilter>
+                </items>
+                <content>
+                    <Text text="Tab Bar Content goes here ..." width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                </content>
+            </IconTabBar>
+        </content>
+        <footer/>
+        <headerContent/>
+    </Page>
+</mvc:View>

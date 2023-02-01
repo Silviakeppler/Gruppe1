@@ -1,0 +1,50 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.redShop.controller.MasterPage1" xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Page title="RedShop" showHeader="true" showFooter="true" showNavButton="false">
+        <content>
+            <HBox alignItems="Center" direction="Row" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
+                <items>
+                    <Image src="/webapp/resources/unnamed.png" height="auto" width="50px" visible="true" densityAware="false"/>
+                    <Text text="Hallo, User!" width="100px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true" class="sapUiSmallMarginBegin"/>
+                </items>
+                <layoutData/>
+            </HBox>
+            <OverflowToolbar width="317.625px" height="46px" design="Solid" visible="true" enabled="true">
+                <content>
+                    <SearchField placeholder="Search" showSearchButton="true" visible="true" width="210.3125px"/>
+                    <ComboBox editable="true" enabled="true" visible="true" width="80px" valueState="None" maxWidth="100%">
+                        <items>
+                            <core:Item text="Alle" enabled="true" key="Alle"/>
+                            <core:Item text="Food" enabled="true" key="Food"/>
+                            <core:Item text="Beverages" enabled="true" key="Beverages"/>
+                            <core:Item text="Electronics" enabled="true" key="Electronics"/>
+                        </items>
+                    </ComboBox>
+                </content>
+            </OverflowToolbar>
+            <Button text="Sort" type="Default" iconFirst="true" width="319.20001220703125px" enabled="true" visible="true" iconDensityAware="false"/>
+            <List mode="SingleSelectMaster" width="100%" headerText="Product Overview" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true">
+                <infoToolbar/>
+                <headerToolbar/>
+                <items>
+                    <ObjectListItem intro="" title="Product name1" number="0,00" numberUnit="EUR" numberState="None" type="Active" selected="false" showMarkers="false" press="_onObjectListItemPress">
+                        <attributes/>
+                        <firstStatus/>
+                        <secondStatus/>
+                    </ObjectListItem>
+                    <ObjectListItem intro="" title="Product name2" number="0,00" numberUnit="EUR" numberState="None" type="Active" selected="false" showMarkers="false" press="_onObjectListItemPress1">
+                        <attributes/>
+                        <firstStatus/>
+                        <secondStatus/>
+                    </ObjectListItem>
+                    <ObjectListItem intro="" title="Product name3" number="0,00" numberUnit="EUR" numberState="None" type="Active" selected="false" showMarkers="false" press="_onObjectListItemPress2">
+                        <attributes/>
+                        <firstStatus/>
+                        <secondStatus/>
+                    </ObjectListItem>
+                </items>
+            </List>
+        </content>
+        <footer/>
+        <headerContent/>
+    </Page>
+</mvc:View>
